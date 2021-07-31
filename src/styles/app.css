@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  border-left: #ddd 1px solid;
+  border-right: #ddd 1px solid;
   overflow: hidden;
 }
 
@@ -19,6 +21,10 @@
 
 @media (max-width: 500px) {
   .app {
+    width: 100%;
+  }
+
+  .chat-room .fixed {
     width: 100%;
   }
 }

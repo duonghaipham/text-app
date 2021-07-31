@@ -21,3 +21,7 @@ button {
   background: none;
   cursor: pointer;
 }
+
+ul {
+  list-style-type: none;
+}
