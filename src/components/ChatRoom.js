@@ -1,9 +1,8 @@
 import firebase from 'firebase/app';
-
 import {useCollectionData} from 'react-firebase-hooks/firestore';
 import {useState} from 'react';
-
 import ChatMessage from './ChatMessage';
+import '../styles/chatroom.css';
 
 const ChatRoom = props => {
   const messageRef = props.firestore.collection('messages');
@@ -26,16 +25,16 @@ const ChatRoom = props => {
   };
 
   return (
-    <>
-      {props.auth.currentUser && <button onClick={() => props.auth.signOut()}>Sign out</button>}
-      <div>
+    <div className='chat-room'>
+      {props.auth.currentUser && <button onClick={() => props.auth.signOut()} className='btn-sign-out'>Sign out</button>}
+      <div className='list-messages'>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} auth={props.auth} />)}
       </div>
-      <form onSubmit={handleSendMessage}>
-        <input type='text' onChange={event => setFormValue(event.target.value)} />
-        <button type='submit'>Send</button>
+      <form onSubmit={handleSendMessage} className='form-sender'>
+        <input type='text' onChange={event => setFormValue(event.target.value)} className='type' />
+        <button type='submit' className='btn-send'><i className='fa fa-send' /></button>
       </form>
-    </>
+    </div>
   );
 };
 

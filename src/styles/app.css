@@ -1,0 +1,24 @@
+.app {
+  position: relative;
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.app .firebase {
+  position: absolute;
+  right: -150px;
+  bottom: 0;
+  height: 500px;
+  opacity: 0.15;
+}
+
+@media (max-width: 500px) {
+  .app {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: url('../assets/fonts/ProductSans-Regular.ttf');
+}
+
+.sign-in {
+  z-index: 1;
+}
+
+.sign-in h1 {
+  margin-bottom: 2rem;
+  color: #3283fc;
+  font-family: 'Product Sans', sans-serif;
+  font-size: 65px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.sign-in .btn-sign-in {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 3px;
+  padding: 2px;
+  background-color: #3283fc;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.sign-in .btn-sign-in .icon {
+  padding: 10px 10px 8px;
+  border-radius: inherit;
+  background-color: #fff;
+}
+
+.sign-in .btn-sign-in .icon .img {
+  width: 30px;
+  height: 30px;
+}
+
+.sign-in .btn-sign-in .text {
+  padding: 0 25px;
+  color: #fff;
+  font-size: 20px;
+}

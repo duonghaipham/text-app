@@ -4,8 +4,8 @@ const ChatMessage = props => {
 
   return (
     <div className={`message ${messageClass}`}>
-      <img src={photoURL} alt='Avatar' />
-      <p>{text}</p>
+      <img src={photoURL} alt='Avatar' className='avatar' />
+      <p className='text'>{text}</p>
     </div>
   );
 }
